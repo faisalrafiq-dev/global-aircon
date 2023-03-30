@@ -73,6 +73,7 @@ group :test do
   gem "webdrivers"
 end
 
+gem 'cloudinary'
 gem 'devise'
 gem "font-awesome-sass", "~> 6.3.0"
 gem "tailwindcss-rails", "~> 2.0"
