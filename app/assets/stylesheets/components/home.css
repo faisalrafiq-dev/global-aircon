@@ -1,0 +1,36 @@
+/* 
+.red-bg {
+  background-color: red;
+  color: white;
+} */
+
+@layer components {
+  /* .btn-primary-abc {
+    @apply py-2 px-4 red-bg;
+  } */
+}
+
+@keyframes count {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes blue-orange {
+  0% { color: indigo; }
+  45% { color: orange; }
+  55% { color: orange; }
+  100% { color: indigo; }
+}
+
+.blue-orange {
+  font-style: italic;
+  animation-name: blue-orange;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+#counter {
+  animation-name: count;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}

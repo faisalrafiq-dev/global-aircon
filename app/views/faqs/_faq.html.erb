@@ -1,0 +1,9 @@
+<div class="bg-orange-100 p-5 rounded-2xl mb-4 relative">
+  <% if current_user.present? && current_user.is_admin %>
+    <%= link_to 'Edit', edit_faq_path(faq.id), class: "absolute top-4 right-4 text-sm text-sky-600" %>
+  <% end %>
+  <div class="px-4 border-orange-300 border-l-8">
+    <div class="text-xl font-bold"><%= "#{faq_counter.succ}. #{faq.question}" %></div>
+    <div class="pt-4 text-sm"><%= faq.answer %></div>
+  </div>
+</div>

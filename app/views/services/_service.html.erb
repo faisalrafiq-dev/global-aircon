@@ -1,0 +1,10 @@
+<div class="bg-orange-100 p-7 rounded-2xl relative">
+  <% if current_user.present? && current_user.is_admin %>
+    <%= link_to 'Edit', edit_service_path(service.id), class: "absolute top-4 right-4 text-sm text-sky-600" %>
+  <% end %>
+  <% if service.image.attached? %>
+    <%= image_tag service.image, class: 'w-20 h-20 mx-auto object-contain' %>
+  <% end %>
+  <div class="text-xl font-bold pt-4 text-center"><%= service.title.upcase %></div>
+  <div class="pt-4 text-sm"><%= service.description %></div>
+</div>

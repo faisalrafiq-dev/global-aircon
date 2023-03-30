@@ -1,0 +1,19 @@
+<div class="text-center bg-gray-100" id="contact-us">
+  <h1 class="text-6xl font-bold py-8 blue-orange">Contact Us</h1>
+  <div class="py-12 text-gray-400">
+    <h3 class="text-4xl font-bold pb-4">Head Office:</h3>
+    <p class="text-xl w-96 pb-6 mx-auto"><%= @company.primary_address %></p>
+    <h3 class="text-3xl font-bold pb-4">Branch Address:</h3>
+    <p class="text-xl w-96 pb-6 mx-auto"><%= @company.secondary_address %></p>
+    <div class="text-xl font-bold pb-6">
+      <span>Contact: <a href="tel:+60 11-2340 0748" class="text-sky-400 hover:text-orange-300">+60 11-2340 0748</a></span>
+      |
+      <span>Email: <a href="mailto:info@globalaircond.com" class="text-sky-400 hover:text-orange-300">info@globalaircond.com</a></span>
+    </div>
+    <div class="text-xl font-bold">
+      Working Hours: <span class="text-sky-400">8 am</span> to <span class="text-sky-400">10 pm</span>
+    </div>
+  </div>
+  <% souce_map = "https://maps.google.com/maps?q=california&t=&z=4&ie=UTF8&iwloc=&output=embed" %>
+  <iframe class="w-full h-96 my-8" src="<%= souce_map %>"></iframe>
+</div>

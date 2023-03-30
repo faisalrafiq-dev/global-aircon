@@ -1,0 +1,13 @@
+<div class="w-full py-6">
+  <h1 class="font-bold text-6xl text-center py-8 blue-orange">
+    Aircon Services
+  </h1>
+
+  <% if current_user.present? && current_user.is_admin %>
+    <%= link_to 'Add New Service', new_service_path, class: "text-sm mx-auto w-fit block px-4 py-2 my-6 text-white rounded hover:bg-orange-400 bg-sky-500" %>
+  <% end %>
+
+  <div id="services" class="container max-w-[1020px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 grid-flow-row">
+    <%= render @services, current_user: current_user %>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="grid grid-cols-1 md:grid-cols-3">
+  <div class="p-5">
+    <div class="bg-[#eef5ff] p-4 h-full flex relative">
+      <% if current_user.present? && current_user.is_admin %>
+        <%= link_to 'Edit', edit_aircon_price_path(aircon_price.id), class: "absolute top-4 right-4 text-sm text-sky-600" %>
+      <% end %>
+      <div class="my-auto w-full">
+        <% if aircon_price.image.attached? %>
+          <%= image_tag aircon_price.image, class: 'w-48 h-48 mx-auto object-contain' %>
+        <% end %>
+        <div class="text-2xl p-4 text-center"><%= aircon_price.name %> Aircond</div>
+      </div>
+    </div>
+  </div>
+  <div class="p-5">
+    <div class="bg-[#eef5ff] p-4 h-full">
+      <div class="text-5xl text-center py-4">
+        <span class="top-[-23px] relative text-sm">RM</span><%= aircon_price.basic_price %><span class="text-sm">/UNIT</span>
+      </div>
+      <div class="text-center text-2xl font-light py-4">
+        <%= aircon_price.name %> - BASIC CLEANING
+      </div>
+      <div class="text-center font-light py-4">
+        <% aircon_price.basic_description.split(/[\r\n]+/).each do |line| %>
+          <div class="pb-2"><%= line %></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="p-5">
+    <div class="bg-[#eef5ff] p-4 h-full">
+      <div class="text-5xl text-center py-4">
+        <span class="top-[-23px] relative text-sm">RM</span><%= aircon_price.chemical_price %><span class="text-sm">/UNIT</span>
+      </div>
+      <div class="text-center text-2xl font-light py-4">
+        <%= aircon_price.name %> - CHEMICAL CLEANING
+      </div>
+      <div class="text-center font-light py-4">
+        <% aircon_price.chemical_description.split(/[\r\n]+/).each do |line| %>
+          <div class="pb-2"><%= line %></div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
