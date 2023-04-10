@@ -81,6 +81,6 @@ test:
 #
 production:
   <<: *default
-  database: super_aircond_production
-  username: super_aircond
-  password: <%= ENV["SUPER_AIRCOND_DATABASE_PASSWORD"] %>
+  database: ysglobalai_global
+  username: ysglobalai_postgres
+  password: Securepassword11@
