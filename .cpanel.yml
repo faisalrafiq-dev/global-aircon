@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ysglobalai/public_html/
+    - export DEPLOYPATH=/home/ysglobalai/repositories/global-aircon/
     - /bin/cp * $DEPLOYPATH
